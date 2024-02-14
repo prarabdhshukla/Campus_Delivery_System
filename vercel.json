@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "canteen_ordering_sys/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "canteen_ordering_sys/wsgi.py"
+        }
+    ]
+}
